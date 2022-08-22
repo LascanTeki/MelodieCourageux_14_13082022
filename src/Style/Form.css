@@ -1,0 +1,51 @@
+.background{
+  background-color: #B5C46B;
+  flex: 1
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+input{
+  border-radius: 5px;
+  height: 20px;
+  background-color: #d8e981;
+}
+
+form{
+  margin-block-end: 1em;
+}
+
+.address {
+  margin-top: 10px;
+  border-color: #485319;
+}
+
+button{
+  padding: 5px;
+  width: 100px;
+  background-color: #5f6d22;
+  border-color:#485319;
+  border-radius: 5px;
+
+}
+
+#modal{
+  background-color: white;
+  max-width: 500px;
+  padding: 15px 30px;
+  text-align: start;
+  width: 90vw;
+  border-radius: 8px;
+}
