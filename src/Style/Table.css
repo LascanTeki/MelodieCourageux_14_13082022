@@ -1,0 +1,11 @@
+.MuiPaper-root{
+    background-color: #485319;
+    text-align: center;
+  }
+
+.Table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}

@@ -2,7 +2,10 @@
 import '../Style/Form.css'
 import { useNavigate } from "react-router-dom";
 import { states } from '../Asset/States'
-import {Modal, open} from '../modal'
+import modal from 'projet-14-library'
+import 'projet-14-library/dist/index.css';
+
+var {Modal, open} = modal
 
 function saveEmployee() {
     const firstName = document.getElementById('first-name');
@@ -17,6 +20,7 @@ function saveEmployee() {
 
     const employees = JSON.parse(localStorage.getItem('employees')) || [];
     const employee = {
+        id: employees.length,
         firstName: firstName.value,
         lastName: lastName.value,
         dateOfBirth: dateOfBirth.value,
@@ -28,10 +32,9 @@ function saveEmployee() {
         zipCode: zipCode.value
     };
     employees.push(employee);
-    console.log(employees);
+    console.log(employees.length);
     localStorage.setItem('employees', JSON.stringify(employees));
     open();
-    localStorage.clear();
 }
 
 
@@ -50,7 +53,7 @@ function Form() {
                 <input id="date-of-birth" type="text" />
 
                 <label htmlFor="start-date">Start Date</label>
-                <input id="start-date" type="text" />
+                {/*<input id="start-date" type="date" />*/}
 
                 <fieldset className="address">
                     <legend>Address</legend>
