@@ -3,10 +3,9 @@ import '../Style/Table.css'
 import MUIDataTable from "mui-datatables";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const data = JSON.parse(localStorage.getItem('employees')) || [];
-console.log(data);
+function Signin({data}) {
 
-function Signin() {
+  console.log(data);
 
   const getMuiTheme = () =>
   createTheme({
@@ -58,6 +57,11 @@ function Signin() {
     {
       name: 'dateOfBirth',
       label: 'dateOfBirth',
+
+    },
+    {
+      name: 'startDate',
+      label: 'startDate',
 
     },
     {

@@ -8,7 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
 }
 
 label {
@@ -25,6 +24,9 @@ input{
 
 form{
   margin-block-end: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .address {
@@ -32,12 +34,14 @@ form{
   border-color: #485319;
 }
 
-button{
+.Save, input[type="submit" i] {
   padding: 5px;
   width: 100px;
   background-color: #5f6d22;
   border-color:#485319;
   border-radius: 5px;
+  height: auto;
+  margin-top: 16px;
 
 }
 
@@ -50,3 +54,67 @@ button{
   border-radius: 8px;
 }
 
+.disabler{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.dialog-sheet{
+  background-color: #d8e981;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.rdp-cell{
+  background-color: #B5C46B;
+  border: 1px solid #d8e981;
+}
+
+/* CSS to replace the one from the plugin */
+
+ .Dropdown-root {
+  position: relative;
+}
+
+ .Dropdown-arrow {
+  border-color: #999 transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+
+.Dropdown-control {
+  position: relative;
+  background-color: #d8e981;
+  border: 2px solid ;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px 52px 4px 10px;
+  min-width: 110px;
+}
+
+.Dropdown-menu {
+  background-color: #d8e981;
+  border: 2px solid ;
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 100;
+}
+
+.Dropdown-option {
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.is-open .Dropdown-arrow {
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
