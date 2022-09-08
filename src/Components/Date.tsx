@@ -8,6 +8,8 @@ export default function DatePickerDialog(prop) {
 
   let clas = prop.clas
 
+  //sets up the callendar input
+
   const [selected, setSelected] = useState<Date>();
   const [inputValue, setInputValue] = useState<string>('');
   const [isPopperOpen, setIsPopperOpen] = useState(false);
@@ -22,10 +24,14 @@ export default function DatePickerDialog(prop) {
     placement: 'bottom-start'
   });
 
+  //function closing the date picker
+
   const closePopper = () => {
     setIsPopperOpen(false);
     buttonRef?.current?.focus();
   };
+
+  //changes date if the date in the input is valid
 
   const handleInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setInputValue(e.currentTarget.value);
@@ -37,9 +43,13 @@ export default function DatePickerDialog(prop) {
     }
   };
 
+  //opens the date picker 
+  
   const handleButtonClick = () => {
     setIsPopperOpen(true);
   };
+
+  //changes input when date is changed
 
   const handleDaySelect = (date) => {
     setSelected(date);

@@ -16,7 +16,8 @@ function Form() {
 
     const [Depar, setDepar] = useState("Sales");
     const [Stat, setState] = useState("Alabama");
-    let state =[]
+    
+    //Saves the informations from the form, sending them to storage
 
     function saveEmployee(e) {
 
@@ -27,7 +28,6 @@ function Form() {
         const startDate = document.getElementById('start-date');
         const street = document.getElementById('street');
         const city = document.getElementById('city');
-        const state = document.getElementById('state');
         const zipCode = document.getElementById('zip-code');
     
         addEmployee({
@@ -43,7 +43,10 @@ function Form() {
         });
         open();
     }
-    
+
+    // Sets the values for Departement and State
+
+    let state =[]
 
     function SelectDepar(option) {
         setDepar(option.value)
@@ -52,6 +55,8 @@ function Form() {
     function SelectState(option) {
         setState(option.value)
     }
+
+    // Creates a new list of states
 
     function statemap(){
         states.map((user) => (
@@ -99,6 +104,7 @@ function Form() {
 
                 <input type="submit" value="Save" />
             </form>
+            {/* The modal whihc will appear once the submit button is clicked*/}
             <Modal><div id="modal"> Employee Created!</div></Modal>
         </div >
     )

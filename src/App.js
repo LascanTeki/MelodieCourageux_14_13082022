@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
     <Header/>
+    {/*importing the closest font I found to the logo's font */}
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet"/>
     <Routes>
       <Route path="/" element={<Home />} />
