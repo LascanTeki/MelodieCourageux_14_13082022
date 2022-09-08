@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom'
 
 function Header() {
 
-
-    //if a username is entered in redux (after login) displays the loged in header with a name and a logout button
-
         return (
             <nav className="Header">
                 <Link className="Logo-link" to="/">
@@ -19,7 +16,6 @@ function Header() {
             </nav>
 
         )
-
 }
 
 export default Header
