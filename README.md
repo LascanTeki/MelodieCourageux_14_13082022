@@ -10,7 +10,6 @@
 
 ## Authors
 
-- Jade, Developper
 - Mel Courageux, Front End Developper
 
 ## Plugins

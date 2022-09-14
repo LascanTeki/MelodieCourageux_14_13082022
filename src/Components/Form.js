@@ -59,8 +59,8 @@ function Form() {
     // Creates a new list of states
 
     function statemap(){
-        states.map((user) => (
-            state.push(user.name)
+        states.map((states) => (
+            state.push(states.name)
         ))
         return state
     }
